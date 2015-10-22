@@ -1,6 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/jortiz/Code/Katas/katas/kata-20151014'
-let g:netrw_dirhist_2='/Users/jortiz/Work/cagit/katas'
-let g:netrw_dirhist_3='/Users/jortiz/Work/cagit/katas/kata-20151014'
-let g:netrw_dirhist_4='/Users/jortiz/Code/Java/HW4'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/jortiz/Code/Javascript'
+let g:netrw_dirhist_2='/Users/jortiz/Code/Javascript/xmarksthespot-kata'
+let g:netrw_dirhist_3='/Users/jortiz/Code/Javascript/SF_NightmareTest'
