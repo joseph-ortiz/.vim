@@ -19,9 +19,15 @@ Plugin 'scrooloose/syntastic' "external syntax checker
 Plugin 'tpope/vim-dispatch' "kicks off builds and test suites
 Plugin 'OmniSharp/omnisharp-vim' "csharp vim intellisense
 Plugin 'mattn/emmet-vim' "snippets for html
+Plugin 'bling/vim-airline' "lean & mean status/tabline for vim that's light as air
+Plugin 'KabbAmine/gulp-vim' "gulp for vim
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+"vim-airline setup
+let g:airline#extensions#tabline#enabled = 1
 
 "Miscenalenous
 set number "shows the line number on.
