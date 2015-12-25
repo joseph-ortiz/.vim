@@ -1,6 +1,6 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/jortiz/Code/Java/HW4'
-let g:netrw_dirhist_2='/Users/jortiz/.bash'
-let g:netrw_dirhist_3='/Users/jortiz/.vim'
-let g:netrw_dirhist_4='/Users/jortiz/Work/cagit/FulfillmentService'
+let g:netrw_dirhist_1='/Users/jortiz/Code/Ruby/twitter-clone'
+let g:netrw_dirhist_2='/Users/jortiz/Code/Node/mmpc'
+let g:netrw_dirhist_3='/Users/jortiz/Code/Docker/pluralsight-docker-CI/test'
+let g:netrw_dirhist_4='/Users/jortiz/Code/Ruby/twitter-clone/app/assets/frontend'
