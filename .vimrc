@@ -111,7 +111,11 @@ Plug 'vim-scripts/pydoc.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plug 'fatih/vim-go' 
+Plug 'fatih/vim-go'
+Plug 'leafgarland/typescript-vim'
+Plug 'icholy/typescript-tools'
+Plug 'hsanson/vim-android'
+au BufRead,BufNewFile *.ts  setlocal filetype=typescript
 
 function! BuildYCM(info)
   if a:info.status == 'installed' || a:info.force
@@ -119,6 +123,13 @@ function! BuildYCM(info)
   endif
 endfunction
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+
+if !exists("g:ycm_semantic_triggers")
+       let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+set completeopt-=preview
+
 
 "if vundle_installed == 0
 "    echo "Installing Plugs, please ignore key map error messages"
@@ -197,12 +208,12 @@ let g:ctrlspace_project_root_markers = [".git", ".hg", ".svn", ".bzr", "_darcs",
 if !isdirectory(s:editor_root . "/ftdetect")
     silent execute "!ln -s " . s:editor_root . "/bundle/ultisnips/ftdetect " . s:editor_root . "/"
 endif
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsListSnippets="<c-l>"
-let g:UltiSnipsEditSplit="vertical"
-let g:ultisnips_python_style="sphinx"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsListSnippets="<c-l>"
+"let g:UltiSnipsEditSplit="vertical"
+"let g:ultisnips_python_style="sphinx"
 
 " set viminfo='100,n$HOME/.vim/files/info/viminfo " Change to nvim agnostic path if necessary
 
@@ -256,3 +267,9 @@ if &term == "screen" || &term =~ "xterm" || &term =~ "nvim"
   set title
 endif
 
+"nerd tree
+map <C-n> :NERDTreeToggle<CR>
+
+
+"vim-android
+let g:android_sdk_path = '/Users/jortiz/Library/Android/sdk'
