@@ -1,7 +1,10 @@
 set number
 syntax on
 
+set pastetoggle=<F10> "toggle paste mode in vim to f10
 
+"vim jsx
+let g:jsx_ext_required = 0
 if has("unix")
   let s:uname = system("uname")
   let g:python_host_prog='/usr/bin/python'
@@ -96,14 +99,12 @@ Plug 'tpope/vim-eunuch'
 Plug 'vim-scripts/taglist.vim'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'thinca/vim-localrc'
-Plug 'kchmck/vim-coffee-script'
 Plug 'groenewege/vim-less'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/FuzzyFinder'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'bling/vim-airline'
 Plug 'rstacruz/sparkup'
-Plug 'tomtom/tcomment_vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/argtextobj.vim'
@@ -115,6 +116,9 @@ Plug 'fatih/vim-go'
 Plug 'leafgarland/typescript-vim'
 Plug 'icholy/typescript-tools'
 Plug 'hsanson/vim-android'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'elixir-lang/vim-elixir'
 au BufRead,BufNewFile *.ts  setlocal filetype=typescript
 
 function! BuildYCM(info)
